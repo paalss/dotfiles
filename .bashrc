@@ -43,7 +43,7 @@ alias nvim-kickstart="NVIM_APPNAME=kickstart nvim"
 alias nvim-chad="NVIM_APPNAME=nvchad nvim"
 alias nvim-astro="NVIM_APPNAME=astronvim nvim"
 
-alias cdc="cd /home/paalss/documents/code"
+alias cdc="cd /home/paalss/code"
 alias cdd="cd /home/paalss/documents "
 alias cddb="cd /home/paalss/documents/code/database-tests"
 alias cdnwb="cd /home/paalss/documents/code/annet/longtitleproject"
