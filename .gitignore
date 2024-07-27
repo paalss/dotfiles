@@ -12,3 +12,8 @@
 .vim/
 .viminfo
 snap/
+.osh-update
+.oh-my-bash
+.sdirs
+lazygit
+lazygit.tar.gz
