@@ -23,11 +23,11 @@ alias n="nvim ."
 alias nn="nvim"
 alias e="explorer.exe ."
 
-alias dev="npm run dev"
-alias start="npm start"
-alias build="npm run build"
-alias test="npm run test"
-alias preview="npm run preview"
+# alias dev="npm run dev"
+# alias start="npm start"
+# alias build="npm run build"
+# alias test="npm run test"
+# alias preview="npm run preview"
 
 alias lg="lazygit"
 alias lgb="lazygit branch"
@@ -114,7 +114,7 @@ __git_complete gm _git_merge
 # OSH_THEME="powerline"
 
 # Z O X I D E
-eval "$(zoxide init bash)"
+# eval "$(zoxide init bash)"
 
 # Z E O V I M - C O N F I G - S W I T C H E R
 #
