@@ -1,4 +1,6 @@
 .vim/undodir/
+code/
+documents/
 .local/
 .cache/
 .config/
