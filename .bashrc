@@ -1,5 +1,3 @@
-# UTDATERT - SE DOTFILES REPO
-
 # Enable the subsequent settings only in interactive sessions
 case $- in
   *i*) ;;
