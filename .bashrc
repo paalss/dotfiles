@@ -1,117 +1,271 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
-# If not running interactively, don't do anything
+# Enable the subsequent settings only in interactive sessions
 case $- in
-    *i*) ;;
-      *) return;;
+  *i*) ;;
+    *) return;;
 esac
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
+# Path to your oh-my-bash installation.
+export OSH=/home/paalss/.oh-my-bash
+export DENO_INSTALL="/home/paalss/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+export PATH="/home/paalss/.local/bin:$PATH"
 
-# append to the history file, don't overwrite it
-shopt -s histappend
+alias startahk="timeout 0.1s bash ~/.config/nvim/lua/autohotkey/start-ahk.sh"
+alias bas="nvim ~/.bashrc"
+alias bas_reload=". ~/.bashrc"
+alias reload_bas=". ~/.bashrc"
+alias update_bas_desktop="cp ~/.config/nvim/lua/autohotkey/hotkeys-for-windows.ahk /mnt/c/Users/Pål\ Stakvik/Desktop/hotkeys-for-windows.ahk"
+alias update_bas_git="cp ~/.bashrc ~/bashrc-git/homebas"
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+alias q="exit"
+alias t="tmux"
+alias n="nvim ."
+alias nn="nvim"
+alias e="explorer.exe ."
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
+alias dev="npm run dev"
+alias start="npm start"
+alias build="npm run build"
+alias test="npm run test"
+alias preview="npm run preview"
 
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
-#shopt -s globstar
+alias lg="lazygit"
+alias lgb="lazygit branch"
+alias lgs="lazygit status"
+alias lgl="lazygit log"
+alias lgsh="lazygit stash"
 
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+alias key="cat ~/documents/github-http-key.txt"
+alias key_edit="nano ~/documents/github-http-key.txt"
 
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
+alias nvim-lazy="NVIM_APPNAME=lazyvim nvim"
+alias nvim-kickstart="NVIM_APPNAME=kickstart nvim"
+alias nvim-chad="NVIM_APPNAME=nvchad nvim"
+alias nvim-astro="NVIM_APPNAME=astronvim nvim"
 
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
-esac
+alias cdc="cd /home/paalss/documents/code"
+alias cdd="cd /home/paalss/documents "
+alias cddb="cd /home/paalss/documents/code/database-tests"
+alias cdnwb="cd /home/paalss/documents/code/annet/longtitleproject"
+alias cduseful="cd ~/documents/code/annet/useful-snippets"
+alias cdprismic="cd /home/paalss/documents/code/annet/my-first-prismic-io-site"
+alias cddonations="cd ~/documents/code/annet/donations"
+alias cdaccounting="cd ~/documents/code/annet/accounting"
 
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+# Neovim config
+alias cdnvim="cd ~/.config/nvim/"
+alias nconfig="cd ~/.config/nvim/ && nvim ."
+alias cdnconfig="cd ~/.config/nvim/"
 
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
-fi
+# windows Neovim config
+# alias cdnvimQt="cd /mnt/c/Users/'Pål Stakvik'/AppData/Local/nvim"
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
+alias cdxampp="cd /mnt/c/xampp/htdocs/sider"
+alias cdannet="cd /mnt/c/xampp/htdocs/sider/annet"
+alias cda="cd /home/paalss/documents/code/annet"
+alias cdhesterier="cd ~/documents/code/annet/historier-hesterier"
+alias cdhistorier="cd /mnt/c/xampp/htdocs/sider/annet/historier"
+alias cdh="cd /mnt/c/xampp/htdocs/sider/annet/tekst"
+# alias cdh="cd  '/mnt/c/Users/Pål Stakvik/OneDrive\Dokumenter\personlig\historier'"
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
+alias cdpalstakvik="cd '/mnt/c/Users/Pål Stakvik'"
+alias cdkattis="cd /mnt/c/xampp/htdocs/sider/annet/kodetester/kattis"
+alias cdpayex="cd /mnt/c/xampp/htdocs/sider/intervjuoppgaver/payex"
+alias cddocuments="cd '/mnt/c/Users/Pål Stakvik/Documents'"
+alias cddesktop="cd '/mnt/c/Users/Pål Stakvik/Desktop'"
+alias cddownloads="cd '/mnt/c/Users/Pål Stakvik/Downloads'"
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+# Forsøk på git autocompletion. fulgte https://ddev.readthedocs.io/en/stable/users/shell-completion/
+# Git autocompletion
+## source it from ~/.bashrc or ~/.bash_profile ##
+#echo "source /etc/profile.d/bash_completion.sh" >> ~/.bashrc
+## Another example Check and load it from ~/.bashrc or ~/.bash_profile ##
+#grep -wq '^source /etc/profile.d/bash_completion.sh' ~/.bashrc || echo 'source /etc/profile.d/bash_completion.sh'>>~/.bashrc
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
+source /usr/share/bash-completion/completions/git
+__git_complete gco _git_checkout
+__git_complete gb _git_branch
+__git_complete gbs _git_bisect
+__git_complete ga _git_add
+__git_complete gcmsg _git_commit
+# //__git_complete gcp _git_cherry-pick
+__git_complete gcs _git_commit
+__git_complete gd _git_diff
+# //__git_complete ggpull _git_pull
+# //__git_complete ggpush _git_push
+__git_complete gl _git_pull
+__git_complete gp _git_push
+__git_complete gm _git_merge
 
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-bash is loaded.
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+# T H E M E S
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+# OSH_THEME="font"
+  OSH_THEME="agnoster" # piler, branch-ikon
+# OSH_THEME="powerline"
+# OSH_THEME="bakke"
+# OSH_THEME="amuse" # branch-ikon, litt lang
+# OSH_THEME="edvardm" # helt ok, # ZSH
+# OSH_THEME="emotty" # hyperkort, branch-ikon # KUN FOR OH_MY_ZSH
+# OSH_THEME="powerline"
+# OSH_THEME="powerline"
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+# Z O X I D E
+eval "$(zoxide init bash)"
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
+# Z E O V I M - C O N F I G - S W I T C H E R
+#
+
+alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
+alias nvim-kick="NVIM_APPNAME=kickstart nvim"
+alias nvim-chad="NVIM_APPNAME=NvChad nvim"
+alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
+
+# function nvims() {
+#     items=("default" "kickstart" "LazyVim" "NvChad" "AstroNvim")
+#     config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+#     if [[ -z $config ]]; then
+#         echo "Nothing selected"
+#         return 0
+#     elif [[ $config == "default" ]]; then
+#         config=""
+#     fi
+#     NVIM_APPNAME=$config nvim $@
+# }
+# bindkey -s ^a "nvims\n"
+
+
+webstorm()
+{
+     # /mnt/c/Program\ Files/JetBrains/WebStorm\ 2022.1.2/bin/webstorm64.exe "$1" > /dev/null 2>&1 &!
+     /mnt/c/Program\ Files/JetBrains/WebStorm\ 2023.2.5/bin/webstorm64.exe .
+}
+
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_OSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $OSH/custom?
+# OSH_CUSTOM=/path/to/new-custom-folder
+
+# To disable the uses of "sudo" by oh-my-bash, please set "false" to
+# this variable.  The default behavior for the empty value is "true".
+OMB_USE_SUDO=true
+
+# Which completions would you like to load? (completions can be found in ~/.oh-my-bash/completions/*)
+# Custom completions may be added to ~/.oh-my-bash/custom/completions/
+# Example format: completions=(ssh git bundler gem pip pip3)
+# Add wisely, as too many completions slow down shell startup.
+completions=(
+  git
+  composer
+  ssh
+)
+
+# Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
+# Custom aliases may be added to ~/.oh-my-bash/custom/aliases/
+# Example format: aliases=(vagrant composer git-avh)
+# Add wisely, as too many aliases slow down shell startup.
+aliases=(
+  general
+)
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-bash/plugins/*)
+# Custom plugins may be added to ~/.oh-my-bash/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  git
+  bashmarks
+)
+
+# Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)
+# Custom plugins may be added to ~/.oh-my-bash/custom/plugins/
+# Example format:
+#  if [ "$DISPLAY" ] || [ "$SSH" ]; then
+#      plugins+=(tmux-autoattach)
+#  fi
+
+source "$OSH"/oh-my-bash.sh
+
+# User configuration
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-bash libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-bash
+# users are encouraged to define aliases within the OSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias bashconfig="mate ~/.bashrc"
+# alias ohmybash="mate ~/.oh-my-bash"
+
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+   prompt_segment black default "P"
+   # prompt_segment black default "$USER"
+   # prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
-fi
+}
+source /etc/profile.d/bash_completion.sh
+source /etc/profile.d/bash_completion.sh
+source /etc/profile.d/bash_completion.sh
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
