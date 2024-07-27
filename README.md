@@ -1,0 +1,5 @@
+Start bashrc
+
+```bash
+. ~/.bashrc
+```
