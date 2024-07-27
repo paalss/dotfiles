@@ -4,4 +4,4 @@
 	email = paalss94@gmail.com
 	name = paalss
 [core]
-	editor = vim
+	editor = nvim
