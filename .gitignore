@@ -28,6 +28,6 @@ lazygit.tar.gz
 .sdirs
 .sudo_as_admin_successful
 .viminfo
-.vim/
+.vim/.netrwhist
 .npm/
 .tmux/plugins/
