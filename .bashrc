@@ -51,6 +51,7 @@ alias cdaccounting="cd ~/code/annet/accounting"
 alias cdnvim="cd ~/.config/nvim/"
 alias nconfig="cd ~/.config/nvim/ && nvim ."
 alias cdnconfig="cd ~/.config/nvim/"
+alias nnvim="cd ~/.config/nvim/"
 
 # windows Neovim config
 # alias cdnvimQt="cd /mnt/c/Users/'Pål Stakvik'/AppData/Local/nvim"
