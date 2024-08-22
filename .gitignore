@@ -32,3 +32,5 @@ lazygit.tar.gz
 .vim/.netrwhist
 .npm/
 .tmux/plugins/
+pubring.kbx
+random_seed
