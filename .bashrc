@@ -53,6 +53,13 @@ alias nconfig="cd ~/.config/nvim/ && nvim ."
 alias cdnconfig="cd ~/.config/nvim/"
 alias nnvim="cd ~/.config/nvim/"
 
+
+vv() {
+  select config in kickstart.nvim lazyvim nvim
+  do NVIM_APPNAME=$config nvim $@; break; done
+}
+
+
 # windows Neovim config
 # alias cdnvimQt="cd /mnt/c/Users/'Pål Stakvik'/AppData/Local/nvim"
 
