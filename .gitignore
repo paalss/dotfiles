@@ -1,4 +1,5 @@
 .vim/undodir/
+.vim/undodir-backup
 snap/
 code/
 documents/
