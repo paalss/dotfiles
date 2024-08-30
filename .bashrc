@@ -14,8 +14,8 @@ alias startahk="timeout 0.1s bash ~/.config/nvim/lua/autohotkey/start-ahk.sh"
 alias bas="nvim ~/.bashrc"
 alias bas_reload=". ~/.bashrc"
 alias reload_bas=". ~/.bashrc"
-alias update_ahk_desktop="cp ~/.config/nvim/lua/autohotkey/hotkeys-for-windows.ahk /mnt/c/Users/Pål\ Stakvik/Desktop/hotkeys-for-windows.ahk"
-# alias update_bas_git="cp ~/.bashrc ~/bashrc-git/homebas"
+alias update_bas_desktop="cp ~/.config/nvim/lua/autohotkey/hotkeys-for-windows.ahk /mnt/c/Users/Pål\ Stakvik/Desktop/hotkeys-for-windows.ahk"
+alias update_bas_git="cp ~/.bashrc ~/bashrc-git/homebas"
 
 alias q="exit"
 alias t="tmux"
@@ -23,11 +23,11 @@ alias n="nvim ."
 alias nn="nvim"
 alias e="explorer.exe ."
 
-alias dev="npm run dev"
-alias start="npm start"
-alias build="npm run build"
-alias test="npm run test"
-alias preview="npm run preview"
+# alias dev="npm run dev"
+# alias start="npm start"
+# alias build="npm run build"
+# alias test="npm run test"
+# alias preview="npm run preview"
 
 alias lg="lazygit"
 alias lgb="lazygit branch"
@@ -35,35 +35,39 @@ alias lgs="lazygit status"
 alias lgl="lazygit log"
 alias lgsh="lazygit stash"
 
-alias key="cat ~/documents/github-http-key.txt"
-alias key_edit="nano ~/documents/github-http-key.txt"
-
 alias nvim-lazy="NVIM_APPNAME=lazyvim nvim"
 alias nvim-kickstart="NVIM_APPNAME=kickstart nvim"
 alias nvim-chad="NVIM_APPNAME=nvchad nvim"
 alias nvim-astro="NVIM_APPNAME=astronvim nvim"
 
-alias cdc="cd /home/paalss/documents/code"
+alias cdc="cd /home/paalss/code"
 alias cdd="cd /home/paalss/documents "
-alias cddb="cd /home/paalss/documents/code/database-tests"
-alias cdnwb="cd /home/paalss/documents/code/annet/longtitleproject"
-alias cduseful="cd ~/documents/code/annet/useful-snippets"
-alias cdprismic="cd /home/paalss/documents/code/annet/my-first-prismic-io-site"
-alias cddonations="cd ~/documents/code/annet/donations"
-alias cdaccounting="cd ~/documents/code/annet/accounting"
+alias cduseful="cd ~/code/useful-snippets"
+alias cdportfolio="cd ~/code/portfolio"
+alias cdprismic="cd /home/paalss/code/annet/my-first-prismic-io-site"
+alias cddonations="cd ~/code/annet/donations"
+alias cdaccounting="cd ~/code/annet/accounting"
 
 # Neovim config
 alias cdnvim="cd ~/.config/nvim/"
 alias nconfig="cd ~/.config/nvim/ && nvim ."
 alias cdnconfig="cd ~/.config/nvim/"
+alias nnvim="cd ~/.config/nvim/"
+
+
+vv() {
+  select config in kickstart.nvim lazyvim nvim
+  do NVIM_APPNAME=$config nvim $@; break; done
+}
+
 
 # windows Neovim config
 # alias cdnvimQt="cd /mnt/c/Users/'Pål Stakvik'/AppData/Local/nvim"
 
 alias cdxampp="cd /mnt/c/xampp/htdocs/sider"
 alias cdannet="cd /mnt/c/xampp/htdocs/sider/annet"
-alias cda="cd /home/paalss/documents/code/annet"
-alias cdhesterier="cd ~/documents/code/annet/historier-hesterier"
+alias cda="cd /home/paalss/code/annet"
+alias cdhesterier="cd ~/code/annet/historier-hesterier"
 alias cdhistorier="cd /mnt/c/xampp/htdocs/sider/annet/historier"
 alias cdh="cd /mnt/c/xampp/htdocs/sider/annet/tekst"
 # alias cdh="cd  '/mnt/c/Users/Pål Stakvik/OneDrive\Dokumenter\personlig\historier'"
@@ -114,7 +118,7 @@ __git_complete gm _git_merge
 # OSH_THEME="powerline"
 
 # Z O X I D E
-eval "$(zoxide init bash)"
+# eval "$(zoxide init bash)"
 
 # Z E O V I M - C O N F I G - S W I T C H E R
 #
@@ -136,6 +140,7 @@ alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
 #     NVIM_APPNAME=$config nvim $@
 # }
 # bindkey -s ^a "nvims\n"
+
 
 webstorm()
 {
@@ -215,7 +220,7 @@ plugins=(
 
 # Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)
 # Custom plugins may be added to ~/.oh-my-bash/custom/plugins/
-# Example format: 
+# Example format:
 #  if [ "$DISPLAY" ] || [ "$SSH" ]; then
 #      plugins+=(tmux-autoattach)
 #  fi
