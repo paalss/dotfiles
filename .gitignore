@@ -3,4 +3,6 @@
 !.gitignore
 !.bashrc
 !.gitconfig
+!.tmux.conf
+!.profile
 !README.md
