@@ -1,0 +1,8 @@
+gui:
+  showRandomTip: true
+git:
+  log:
+    showWholeGraph: true
+  paging:
+    colorArg: always
+    # pager: delta --dark --paging=never

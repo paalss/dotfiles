@@ -6,3 +6,7 @@
 !.tmux.conf
 !.profile
 !README.md
+
+!.config/
+!.config/lazygit/
+!.config/lazygit/config.yml
