@@ -19,6 +19,7 @@ alias update_bas_git="cp ~/.bashrc ~/bashrc-git/homebas"
 
 alias q="exit"
 alias t="tmux"
+alias tt="bash ~/dev-tmux.sh"
 alias n="nvim ."
 alias nn="nvim"
 alias e="explorer.exe ."

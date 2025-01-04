@@ -5,6 +5,7 @@
 !.gitconfig
 !.tmux.conf
 !.profile
+!dev-tmux.sh
 !README.md
 
 !.config/
