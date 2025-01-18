@@ -11,3 +11,7 @@
 !.config/
 !.config/lazygit/
 !.config/lazygit/config.yml
+
+!.local/
+!.local/scripts/
+!.local/scripts/tmux-sessionizer
