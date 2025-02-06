@@ -30,6 +30,9 @@ alias e="explorer.exe ."
 # alias test="npm run test"
 # alias preview="npm run preview"
 
+alias ahk="timeout 0.1s bash ~/.config/nvim/lua/autohotkey/start-ahk.sh"
+alias nahk="nvim ~/autohotkey.ahk"
+
 alias lg="lazygit"
 alias lgb="lazygit branch"
 alias lgs="lazygit status"
