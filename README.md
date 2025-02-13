@@ -20,3 +20,5 @@ t # tmux
 ```bash
 tt # start tmux with 2 panes. Pane 1: nvim 2: command line
 ```
+
+<https://useful-snippets.netlify.app/posts/taskwarrior-tui/>
