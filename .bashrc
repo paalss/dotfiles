@@ -32,7 +32,7 @@ alias e="explorer.exe ."
 
 alias ahk="timeout 0.1s bash ~/.config/nvim/lua/autohotkey/start-ahk.sh"
 alias nahk="nvim ~/autohotkey.ahk"
-alias taskwarriortui="~/./taskwarrior-tui"
+alias todo="~/./taskwarrior-tui"
 
 alias lg="lazygit"
 alias lgb="lazygit branch"
