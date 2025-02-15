@@ -10,7 +10,6 @@ export DENO_INSTALL="/home/paalss/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 export PATH="/home/paalss/.local/bin:$PATH"
 
-alias startahk="timeout 0.1s bash ~/.config/nvim/lua/autohotkey/start-ahk.sh"
 alias bas="nvim ~/.bashrc"
 alias bas_reload=". ~/.bashrc"
 alias reload_bas=". ~/.bashrc"
