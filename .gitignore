@@ -8,6 +8,7 @@
 !dev-tmux.sh
 !README.md
 !autohotkey.ahk
+!start-ahk.sh
 
 !.config/
 !.config/lazygit/
