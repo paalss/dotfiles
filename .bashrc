@@ -46,6 +46,7 @@ alias nvim-astro="NVIM_APPNAME=astronvim nvim"
 
 alias cdd="cd ~/documents"
 alias cdc="cd ~/code"
+alias cddiariumbackup="cd ~/code/diarium/backup"
 alias cdtest="cd ~/code/test"
 alias cdastro="cd ~/code/test/astro"
 alias cdtemplate="cd ~/code/astro-template"
