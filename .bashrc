@@ -16,6 +16,10 @@ alias reload_bas=". ~/.bashrc"
 alias update_bas_desktop="cp ~/.config/nvim/lua/autohotkey/hotkeys-for-windows.ahk /mnt/c/Users/Pål\ Stakvik/Desktop/hotkeys-for-windows.ahk"
 alias update_bas_git="cp ~/.bashrc ~/bashrc-git/homebas"
 
+grepbas() {
+    grep "$1" ~/.bashrc;
+}
+
 alias q="exit"
 alias t="tmux"
 alias tt="bash ~/dev-tmux.sh"
