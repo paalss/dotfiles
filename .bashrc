@@ -56,7 +56,7 @@ alias cdtemplate="cd ~/code/astro-template"
 alias cduseful="cd ~/code/useful-snippets"
 alias cdportfolio="cd ~/code/portfolio"
 alias portfolionew="cd ~/code/portfolio-new"
-alias startportfolionew="portfolionew && ~/start-portfolio-new.sh"
+alias startportfolionew="portfolionew && bash ~/start-portfolio-new.sh"
 alias cddonations="cd ~/code/annet/donations"
 alias cdaccounting="cd ~/code/annet/accounting"
 
