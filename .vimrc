@@ -1,3 +1,4 @@
+set langmap=å[,æ]Å{,Æ}
 let mapleader = " "
 
 set number
