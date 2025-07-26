@@ -13,5 +13,8 @@ nnoremap <leader>so :so %<CR>
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
 nnoremap \| @w
-nnoremap <leader>no :nohlsearch<CR>
+" nnoremap <leader>no :nohlsearch<CR>
 nnoremap J mzJ`z
+
+" nnoremap <a-k> :m-2<CR>
+" nnoremap <a-j> :m+<CR>
