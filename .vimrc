@@ -4,8 +4,12 @@ let mapleader = " "
 set number
 set relativenumber
 
+
+" BASIC ACTIONS
+
 nnoremap <leader>q :q<CR>
 nnoremap <leader>ww :w<CR>
+nnoremap <leader>wa :a<CR>
 nnoremap <leader>wq :wq<CR>
 nnoremap <leader>x :x<CR>
 nnoremap <leader>so :so %<CR>
@@ -16,5 +20,14 @@ nnoremap \| @w
 " nnoremap <leader>no :nohlsearch<CR>
 nnoremap J mzJ`z
 
-" nnoremap <a-k> :m-2<CR>
-" nnoremap <a-j> :m+<CR>
+
+" OPERATOR PENDING
+
+onoremap ig i"
+onoremap ag a"
+
+onoremap aG a'
+onoremap iG i'
+
+onoremap iv i[
+onoremap av a[
