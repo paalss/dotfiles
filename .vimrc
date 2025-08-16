@@ -9,7 +9,7 @@ set relativenumber
 
 nnoremap <leader>q :q<CR>
 nnoremap <leader>ww :w<CR>
-nnoremap <leader>wa :a<CR>
+nnoremap <leader>wa :wa<CR>
 nnoremap <leader>wq :wq<CR>
 nnoremap <leader>x :x<CR>
 nnoremap <leader>so :so %<CR>

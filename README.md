@@ -1,10 +1,32 @@
+## Vim
+
+### For VSCode
+
+**Default path**
+
+```
+C:\Users\Pål Stakvik\.vimrc
+```
+
+**VSCode settings.json**
+
+```json
+{
+  "vim.vimrc.enable": true
+  "vim.leader": "<space>",
+}
+```
+
+
+## Bashrc
+
 Start (source) bashrc
 
 ```bash
 . ~/.bashrc
 ```
 
-https://github.com/ohmybash/oh-my-bash
+<https://github.com/ohmybash/oh-my-bash>
 
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
