@@ -31,6 +31,7 @@ alias e="explorer.exe ."
 # alias build="npm run build"
 # alias test="npm run test"
 # alias preview="npm run preview"
+alias tsc="npm run compile"
 
 alias ahk="timeout 0.1s bash ~/start-ahk.sh"
 alias nahk="nvim ~/autohotkey.ahk"
