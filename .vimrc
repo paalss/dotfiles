@@ -3,6 +3,7 @@ let mapleader = " "
 
 set number
 set relativenumber
+set path=**
 
 
 " BASIC ACTIONS
@@ -13,6 +14,7 @@ nnoremap <leader>wa :wa<CR>
 nnoremap <leader>wq :wq<CR>
 nnoremap <leader>x :x<CR>
 nnoremap <leader>so :so %<CR>
+nnoremap <C-p> :find 
 
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
