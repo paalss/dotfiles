@@ -24,6 +24,8 @@ alias t="tmux"
 alias tt="bash ~/dev-tmux.sh"
 alias n="nvim ."
 alias nn="nvim"
+alias v="vim ."
+alias vv="vim"
 alias e="explorer.exe ."
 
 # alias dev="npm run dev"
