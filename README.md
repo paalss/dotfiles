@@ -1,3 +1,7 @@
+# WSL dotfiles
+
+- Mac dotfiles: https://github.com/paalss/mac-dotfiles
+
 ## Vim
 
 ### For VSCode
