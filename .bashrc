@@ -70,7 +70,7 @@ alias cdnconfig="cd ~/.config/nvim/"
 alias nnvim="cd ~/.config/nvim/"
 
 
-vv() {
+selectvim() {
   select config in kickstart.nvim lazyvim nvim
   do NVIM_APPNAME=$config nvim $@; break; done
 }
