@@ -19,8 +19,10 @@ nnoremap <C-p> :find
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
 nnoremap \| @w
-" nnoremap <leader>no :nohlsearch<CR>
+nnoremap <esc> :nohlsearch<CR>
 nnoremap J mzJ`z
+nnoremap <leader>n /
+nnoremap <leader><leader>n ?
 
 
 " OPERATOR PENDING
