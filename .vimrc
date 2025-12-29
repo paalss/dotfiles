@@ -19,7 +19,6 @@ nnoremap <C-p> :find
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
 nnoremap \| @w
-nnoremap <esc> :nohlsearch<CR>
 nnoremap J mzJ`z
 nnoremap <leader>n /
 nnoremap <leader><leader>n ?
