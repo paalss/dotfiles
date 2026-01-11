@@ -156,6 +156,12 @@ alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
 # }
 # bindkey -s ^a "nvims\n"
 
+# search for word in a file's git history
+# usage: filehistorysearch "use-query-params" package.json
+
+filehistorysearch() {
+  git grep $1 $(git rev-list --all -- $2) -- $2
+}
 
 webstorm()
 {
