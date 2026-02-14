@@ -18,6 +18,16 @@ nnoremap <leader>wq :wq<CR>
 nnoremap <leader>so :so %<CR>
 nnoremap <C-p> :find 
 
+nnoremap <tab> >>
+nnoremap <S-tab> <<
+vnoremap <tab> >>gv
+vnoremap <S-tab> <<gv
+
+nnoremap << <nop>
+nnoremap >> <nop>
+vnoremap << <nop>
+vnoremap >> <nop>
+
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
 nnoremap \| @w
