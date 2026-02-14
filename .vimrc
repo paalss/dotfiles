@@ -9,10 +9,9 @@ set path=**
 " BASIC ACTIONS
 
 nnoremap <leader>q :q<CR>
-nnoremap <leader>ww :w<CR>
-nnoremap <leader>wa :wa<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>W :wa<CR>
 nnoremap <leader>wq :wq<CR>
-nnoremap <leader>x :x<CR>
 nnoremap <leader>so :so %<CR>
 nnoremap <C-p> :find 
 
@@ -22,18 +21,20 @@ nnoremap \| @w
 nnoremap J mzJ`z
 nnoremap <leader>n /
 nnoremap <leader><leader>n ?
+vnoremap <leader>n /
+vnoremap <leader><leader>n /
 
 
 " OPERATOR PENDING
 
-onoremap ig i"
-onoremap ag a"
+onoremap ic i"
+onoremap ac a"
 
-onoremap aG a'
-onoremap iG i'
+onoremap aC a'
+onoremap iC i'
 
-onoremap iv i[
-onoremap av a[
+onoremap ir i[
+onoremap ar a[
 
 
 function! JSXIsSelfCloseTag(mode)
@@ -69,4 +70,18 @@ nnoremap yat :call JSXSelectTag("y")<CR>
 nnoremap dat :call JSXSelectTag("d")<CR>
 nnoremap cat :call JSXSelectTag("v")<CR>c
 
-
+" https://stackoverflow.com/questions/68651723/vimdiff-files-between-git-branches
+" function! Diff(spec)
+"     vertical new
+"     setlocal bufhidden=wipe buftype=nofile nobuflisted noswapfile
+"     let cmd = "++edit #"
+"     if len(a:spec)
+"         let cmd = "!git -C " . shellescape(fnamemodify(finddir('.git', '.;'), ':p:h:h')) . " show " . a:spec . ":#"
+"     endif
+"     execute "read " . cmd
+"     silent 0d_
+"     diffthis
+"     wincmd p
+"     diffthis
+" endfunction
+" command! -nargs=? Diff call Diff(<q-args>)
