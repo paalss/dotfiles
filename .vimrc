@@ -3,11 +3,14 @@ let mapleader = " "
 
 set number
 set relativenumber
+set incsearch
 set path=**
 
 
 " BASIC ACTIONS
 
+inoremap jk <esc>
+inoremap <esc> <nop>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>W :wa<CR>
