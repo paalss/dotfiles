@@ -11,7 +11,7 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 export PATH="/home/paalss/.local/bin:$PATH"
 
 alias bas="nvim ~/.bashrc"
-alias bas_reload=". ~/.bashrc"
+alias basr=". ~/.bashrc"
 alias update_bas_desktop="cp ~/.config/nvim/lua/autohotkey/hotkeys-for-windows.ahk /mnt/c/Users/Pål\ Stakvik/Desktop/hotkeys-for-windows.ahk"
 alias update_bas_git="cp ~/.bashrc ~/bashrc-git/homebas"
 
@@ -93,6 +93,24 @@ alias cdpayex="cd /mnt/c/xampp/htdocs/sider/intervjuoppgaver/payex"
 alias cddocuments="cd '/mnt/c/Users/Pål Stakvik/Documents'"
 alias cddesktop="cd '/mnt/c/Users/Pål Stakvik/Desktop'"
 alias cddownloads="cd '/mnt/c/Users/Pål Stakvik/Downloads'"
+
+alias nprepush="nvim .git/hooks/pre-push"
+alias activateprepush="mv .git/hooks/pre-push.sample .git/hooks/pre-push"
+alias deactivateprepush="mv .git/hooks/pre-push .git/hooks/pre-push.sample"
+
+lsprepush() {
+  if [[ -f ".git/hooks/pre-push" ]]; then
+    echo ".git/hooks/pre-push was found:"
+    echo "pre-push is activated"
+  else
+    if [[ -f ".git/hooks/pre-push.sample" ]]; then
+      echo ".git/hooks/pre-push.sample was found:"
+      echo "pre-push is deactivated"
+    else
+      echo "Hmmmmm"
+    fi
+  fi
+}
 
 # Forsøk på git autocompletion. fulgte https://ddev.readthedocs.io/en/stable/users/shell-completion/
 # Git autocompletion
