@@ -94,17 +94,36 @@ alias cddocuments="cd '/mnt/c/Users/Pål Stakvik/Documents'"
 alias cddesktop="cd '/mnt/c/Users/Pål Stakvik/Desktop'"
 alias cddownloads="cd '/mnt/c/Users/Pål Stakvik/Downloads'"
 
-alias nprepush="nvim .git/hooks/pre-push"
 alias activateprepush="mv .git/hooks/pre-push.sample .git/hooks/pre-push"
 alias deactivateprepush="mv .git/hooks/pre-push .git/hooks/pre-push.sample"
 
-lsprepush() {
+# "po" for "posh" ("push")
+
+po() {
+  if [[ -f ".git/hooks/pre-push" ]]; then
+    echo ".git/hooks/pre-push was found:"
+    nvim .git/hooks/pre-push
+  else
+    if [[ -f ".git/hooks/pre-push.sample" ]]; then
+      echo ".git/hooks/pre-push was not found:"
+      echo "but .git/hooks/pre-push.sample was found:"
+      nvim .git/hooks/pre-push.sample
+    else
+      echo "Hmmmmm"
+    fi
+  fi
+}
+
+# "l" as in the "ls -a" alias. "po" as in "posh"
+
+lpo() {
   if [[ -f ".git/hooks/pre-push" ]]; then
     echo ".git/hooks/pre-push was found:"
     echo "pre-push is activated"
   else
     if [[ -f ".git/hooks/pre-push.sample" ]]; then
-      echo ".git/hooks/pre-push.sample was found:"
+      echo ".git/hooks/pre-push was not found:"
+      echo "but .git/hooks/pre-push.sample was found:"
       echo "pre-push is deactivated"
     else
       echo "Hmmmmm"

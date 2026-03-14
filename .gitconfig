@@ -5,3 +5,7 @@
 	name = paalss
 [core]
 	editor = nvim
+[rerere]
+  enabled = true
+[commit]
+  verbose = true
