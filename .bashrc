@@ -10,6 +10,14 @@ export DENO_INSTALL="/home/paalss/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 export PATH="/home/paalss/.local/bin:$PATH"
 
+# ripgrep
+alias ripgrep="rg"
+
+# live ripgrep
+alias p0="bash ~/rvf.sh "
+alias p="nn \$(fzf)" # funker ikke, overwritten by `alias p=bm -p`
+alias pp="nn \$(fzf)"
+
 alias bas="nvim ~/.bashrc"
 alias basr=". ~/.bashrc"
 alias update_bas_desktop="cp ~/.config/nvim/lua/autohotkey/hotkeys-for-windows.ahk /mnt/c/Users/Pål\ Stakvik/Desktop/hotkeys-for-windows.ahk"
