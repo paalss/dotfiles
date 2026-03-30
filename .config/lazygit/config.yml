@@ -1,8 +1,18 @@
 gui:
   showRandomTip: true
+  showNumstatInFilesView: true
+  showBottomLine: true
 git:
+  disableForcePushing: true
   log:
     showWholeGraph: false
   paging:
     colorArg: always
     # pager: delta --dark --paging=never
+os:
+  openLink: 'bash -C explorer.exe {{link}}'
+notARepository: quit
+keybinding:
+  universal:
+    nextTab: 'æ' # ]
+    prevTab: 'å' # [
