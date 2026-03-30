@@ -4,7 +4,6 @@
 # https://github.com/junegunn/fzf/blob/master/ADVANCED.md#ripgrep-integration
 
 # requirements:
-# - bat
 # - ripgrep
 # - fzf
 
@@ -15,6 +14,4 @@ rg --color=always --line-number --no-heading --smart-case "${*:-}" |
   fzf --ansi \
       --color "hl:-1:underline,hl+:-1:underline:reverse" \
       --delimiter : \
-      --preview 'cat' \
-      --preview-window 'up,60%,border-bottom,+{2}+3/3,~3' \
       --bind 'enter:become(nvim {1} +{2})'
