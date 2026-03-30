@@ -72,12 +72,17 @@ alias startportfolionew="portfolionew && bash ~/start-portfolio-new.sh"
 alias cddonations="cd ~/code/annet/donations && rename_tmux_window donations"
 alias cdaccounting="cd ~/code/annet/accounting && rename_tmux_window accounting"
 
-# Neovim config
-alias cdnvim="cd ~/.config/nvim/"
-alias nconfig="cd ~/.config/nvim/ && nvim ."
-alias cdnconfig="cd ~/.config/nvim/"
 alias nnvim="cd ~/.config/nvim/ && rename_tmux_window Neovim"
 
+alias idea="nvim ~/.ideavimrc"
+alias vimrc="nvim ~/.vimrc"
+alias rem="nvim ~/.config/nvim/lua/setup/remap.lua"
+alias set="nvim ~/.config/nvim/lua/setup/set.lua"
+alias aft="nvim ~/.config/nvim/after/plugin/"
+alias use="nvim ~/code/useful-snippets/posts/"
+alias surr="nvim ~/.config/nvim/after/plugin/vim-surround.lua"
+alias diff="nvim ~/.config/nvim/after/plugin/diffview.lua"
+alias fzfvim="nvim ~/.config/nvim/after/plugin/fzfvim.lua"
 
 selectvim() {
   select config in kickstart.nvim lazyvim nvim
