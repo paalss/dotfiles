@@ -61,22 +61,22 @@ alias nvim-astro="NVIM_APPNAME=astronvim nvim"
 alias cdd="cd ~/documents"
 alias cdc="cd ~/code"
 alias cddiarium="cd ~/code/diarium"
-alias cdtest="cd ~/code/test"
-alias cdastro="cd ~/code/test/astro"
+alias cdtest="cd ~/code/test && rename_tmux_window test"
+alias cdastro="cd ~/code/test/astro && rename_tmux_window astro"
 alias cdtemplate="cd ~/code/astro-template"
-alias useful="cd ~/code/useful-snippets"
+alias useful="cd ~/code/useful-snippets && rename_tmux_window useful-snippets"
 alias cdportfolio="cd ~/code/portfolio"
-alias portfolionew="cd ~/code/portfolio-new"
-alias reviews="cd ~/code/portfolio-new"
+alias portfolionew="cd ~/code/portfolio-new && rename_tmux_window reviews"
+alias reviews="cd ~/code/portfolio-new && rename_tmux_window reviews"
 alias startportfolionew="portfolionew && bash ~/start-portfolio-new.sh"
-alias cddonations="cd ~/code/annet/donations"
-alias cdaccounting="cd ~/code/annet/accounting"
+alias cddonations="cd ~/code/annet/donations && rename_tmux_window donations"
+alias cdaccounting="cd ~/code/annet/accounting && rename_tmux_window accounting"
 
 # Neovim config
 alias cdnvim="cd ~/.config/nvim/"
 alias nconfig="cd ~/.config/nvim/ && nvim ."
 alias cdnconfig="cd ~/.config/nvim/"
-alias nnvim="cd ~/.config/nvim/"
+alias nnvim="cd ~/.config/nvim/ && rename_tmux_window Neovim"
 
 
 selectvim() {
@@ -84,6 +84,15 @@ selectvim() {
   do NVIM_APPNAME=$config nvim $@; break; done
 }
 
+# bare kjør denne her hvis alias value starter med Ã¥ til et directory
+# Hadde det vært bedre om man lagde en goto-funksjon og brukte det i stedet?
+function rename_tmux_window {
+  if [ -z "$TMUX" ]; then
+    echo "Not in tmux, nothing to rename"
+  else
+    tmux rename-window "$1"
+  fi
+}
 
 # windows Neovim config
 # alias cdnvimQt="cd /mnt/c/Users/'PÃ¥l Stakvik'/AppData/Local/nvim"
