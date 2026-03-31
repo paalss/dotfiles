@@ -122,7 +122,7 @@ alias deactivateprepush="mv .git/hooks/pre-push .git/hooks/pre-push.sample"
 
 # "po" for "posh" ("push")
 
-po() {
+pos() {
   if [[ -f ".git/hooks/pre-push" ]]; then
     echo ".git/hooks/pre-push was found:"
     nvim .git/hooks/pre-push
