@@ -23,10 +23,10 @@ nnoremap <S-tab> <<
 vnoremap <tab> >>gv
 vnoremap <S-tab> <<gv
 
-nnoremap << <nop>
-nnoremap >> <nop>
-vnoremap << <nop>
-vnoremap >> <nop>
+nnoremap < >>
+nnoremap > <<
+vnoremap < >gv
+vnoremap > <gv
 
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>

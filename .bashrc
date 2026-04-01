@@ -74,7 +74,7 @@ alias cdaccounting="cd ~/code/annet/accounting && rename_tmux_window accounting"
 
 alias nnvim="cd ~/.config/nvim/ && rename_tmux_window Neovim"
 
-alias idea="nvim ~/.ideavimrc"
+alias idea="nvim '/mnt/c/Users/Pål Stakvik'/.ideavimrc"
 alias vimrc="nvim ~/.vimrc"
 alias rem="nvim ~/.config/nvim/lua/setup/remap.lua"
 # alias set="nvim ~/.config/nvim/lua/setup/set.lua"
@@ -82,6 +82,7 @@ alias aft="nvim ~/.config/nvim/after/plugin/"
 alias use="nvim ~/code/useful-snippets/posts/"
 alias surr="nvim ~/.config/nvim/after/plugin/vim-surround.lua"
 alias diff="nvim ~/.config/nvim/after/plugin/diffview.lua"
+alias lsp="nvim ~/.config/nvim/after/plugin/lsp.lua"
 alias fzfvim="nvim ~/.config/nvim/after/plugin/fzfvim.lua"
 
 selectvim() {
@@ -350,6 +351,14 @@ source /etc/profile.d/bash_completion.sh
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+#
+# bash
+# eval "$(fzf --bash)"
+#
+# zsh
+# source <(fzf --zsh)
+#
+# https://github.com/junegunn/fzf?tab=readme-ov-file#setting-up-shell-integration
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
