@@ -85,6 +85,8 @@ alias diff="nvim ~/.config/nvim/after/plugin/diffview.lua"
 alias lsp="nvim ~/.config/nvim/after/plugin/lsp.lua"
 alias fzfvim="nvim ~/.config/nvim/after/plugin/fzfvim.lua"
 
+alias u="cd ~/code/useful-snippets && rename_tmux_window useful-snippets && nvim"
+
 selectvim() {
   select config in kickstart.nvim lazyvim nvim
   do NVIM_APPNAME=$config nvim $@; break; done
