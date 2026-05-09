@@ -47,11 +47,20 @@ alias ahk="timeout 0.1s bash ~/start-ahk.sh"
 alias nahk="nvim ~/autohotkey.ahk"
 alias todo="~/./taskwarrior-tui"
 
+# lazygit
 alias lg="lazygit"
 alias lgb="lazygit branch"
 alias lgs="lazygit status"
 alias lgl="lazygit log"
 alias lgsh="lazygit stash"
+
+# git flow
+alias gffs="update_prepush"
+
+function update_prepush {
+  sed -i'' -e "s/allowed_branch_name=\".*\"/allowed_branch_name=\"$1\"/g" .git/hooks/pre-push
+}
+
 
 alias nvim-lazy="NVIM_APPNAME=lazyvim nvim"
 alias nvim-kickstart="NVIM_APPNAME=kickstart nvim"
@@ -71,6 +80,7 @@ alias reviews="cd ~/code/reviews && rename_tmux_window reviews"
 alias startportfolionew="portfolionew && bash ~/start-reviews.sh"
 alias cddonations="cd ~/code/annet/donations && rename_tmux_window donations"
 alias cdaccounting="cd ~/code/annet/accounting && rename_tmux_window accounting"
+alias gittesting="cd ~/code/test/gittesting"
 
 alias nnvim="cd ~/.config/nvim/ && rename_tmux_window Neovim"
 
