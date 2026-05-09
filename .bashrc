@@ -104,6 +104,7 @@ selectvim() {
 
 # bare kjør denne her hvis alias value starter med Ã¥ til et directory
 # Hadde det vært bedre om man lagde en goto-funksjon og brukte det i stedet?
+
 function rename_tmux_window {
   if [ -z "$TMUX" ]; then
     echo "Not in tmux, nothing to rename"
@@ -148,33 +149,35 @@ function isGitHookActivated {
 }
 
 pos() {
-  if [[ -f ".git/hooks/pre-push" ]]; then
-    echo ".git/hooks/pre-push was found:"
-    nvim .git/hooks/pre-push
+  local hook="pre-push"
+  local res=$(isGitHookActivated "$hook")
+  if [ "$res" = true ] ; then
+    nvim ".git/hooks/$hook"
   else
-    if [[ -f ".git/hooks/pre-push.sample" ]]; then
-      echo ".git/hooks/pre-push was not found:"
-      echo "but .git/hooks/pre-push.sample was found:"
-      nvim .git/hooks/pre-push.sample
+    if [ "$res" = false ] ; then
+      nvim ".git/hooks/$hook.sample"
     else
-      echo "Hmmmmm"
+      echo "no: $res"
     fi
   fi
 }
 
 # "l" as in the "ls -a" alias. "po" as in "posh"
 
+# check if prepush hook is activated
 lpo() {
-  if [[ -f ".git/hooks/pre-push" ]]; then
+  local hook="pre-push"
+  local res=$(isGitHookActivated "$hook")
+  if [ "$res" = true ] ; then
     echo ".git/hooks/pre-push was found:"
     echo "pre-push is activated"
   else
-    if [[ -f ".git/hooks/pre-push.sample" ]]; then
+    if [ "$res" = false ] ; then
       echo ".git/hooks/pre-push was not found:"
       echo "but .git/hooks/pre-push.sample was found:"
       echo "pre-push is deactivated"
     else
-      echo "Hmmmmm"
+      echo "$res"
     fi
   fi
 }
