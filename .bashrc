@@ -148,7 +148,7 @@ function isGitHookActivated {
   fi
 }
 
-pos() {
+ppo() {
   local hook="pre-push"
   local res=$(isGitHookActivated "$hook")
   if [ "$res" = true ] ; then
