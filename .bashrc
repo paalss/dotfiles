@@ -135,6 +135,18 @@ alias deactivateprepush="mv .git/hooks/pre-push .git/hooks/pre-push.sample"
 
 # "po" for "posh" ("push")
 
+function isGitHookActivated {
+  if [[ -f ".git/hooks/$1" ]]; then
+    echo true
+  else
+    if [[ -f ".git/hooks/$1.sample" ]]; then
+      echo false
+    else
+      echo "undefined"
+    fi
+  fi
+}
+
 pos() {
   if [[ -f ".git/hooks/pre-push" ]]; then
     echo ".git/hooks/pre-push was found:"
