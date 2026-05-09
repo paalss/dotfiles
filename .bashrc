@@ -59,7 +59,7 @@ alias gffs="update_prepush"
 
 # 1: new branch name
 function update_prepush {
-  sed -i'' -e "s/allowed_branch_name=\".*\"/allowed_branch_name=\"$1\"/g" "$(gitHook pre-push)"
+  sed -i'' -e "s/allowed_branch_name=\".*\"/allowed_branch_name=\"$1\"/g" $(gitHookFull pre-push)
 }
 
 
@@ -134,6 +134,7 @@ alias cddownloads="cd '/mnt/c/Users/Pål Stakvik/Downloads'"
 
 alias activateprepush="mv .git/hooks/pre-push.sample .git/hooks/pre-push"
 alias deactivateprepush="mv .git/hooks/pre-push .git/hooks/pre-push.sample"
+alias toggleoprepush="echo 'not made yet'"
 
 # "po" for "posh" ("push")
 
@@ -162,6 +163,21 @@ function gitHook {
   fi
 }
 
+#1: name of git hook (e.g. pre-push, post-commit)
+function gitHookFull {
+  if [[ -f ".git/hooks/$1" ]]; then
+    echo ".git/hooks/$1"
+  else
+    if [[ -f ".git/hooks/$1.sample" ]]; then
+      echo ".git/hooks/$1.sample"
+    else
+      echo "undefined"
+    fi
+  fi
+}
+
+
+
 
 ppo() {
   local hook="pre-push"
@@ -178,24 +194,6 @@ ppo() {
 }
 
 # "l" as in the "ls -a" alias. "po" as in "posh"
-
-# check if prepush hook is activated
-lpo() {
-  local hook="pre-push"
-  local res=$(isGitHookActivated "$hook")
-  if [ "$res" = true ] ; then
-    echo ".git/hooks/pre-push was found:"
-    echo "pre-push is activated"
-  else
-    if [ "$res" = false ] ; then
-      echo ".git/hooks/pre-push was not found:"
-      echo "but .git/hooks/pre-push.sample was found:"
-      echo "pre-push is deactivated"
-    else
-      echo "$res"
-    fi
-  fi
-}
 
 # Forsøk på git autocompletion. fulgte https://ddev.readthedocs.io/en/stable/users/shell-completion/
 # Git autocompletion
