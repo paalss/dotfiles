@@ -57,8 +57,9 @@ alias lgsh="lazygit stash"
 # git flow
 alias gffs="update_prepush"
 
+# 1: new branch name
 function update_prepush {
-  sed -i'' -e "s/allowed_branch_name=\".*\"/allowed_branch_name=\"$1\"/g" .git/hooks/pre-push
+  sed -i'' -e "s/allowed_branch_name=\".*\"/allowed_branch_name=\"$1\"/g" "$(gitHook pre-push)"
 }
 
 
@@ -147,6 +148,20 @@ function isGitHookActivated {
     fi
   fi
 }
+
+#1: name of git hook (e.g. pre-push, post-commit)
+function gitHook {
+  if [[ -f ".git/hooks/$1" ]]; then
+    echo "$1"
+  else
+    if [[ -f ".git/hooks/$1.sample" ]]; then
+      echo $1.sample
+    else
+      echo "undefined"
+    fi
+  fi
+}
+
 
 ppo() {
   local hook="pre-push"
