@@ -27,6 +27,8 @@ grepbas() {
     grep "$1" ~/.bashrc;
 }
 
+alias x="git checkout -"
+
 alias q="exit"
 alias t="tmux"
 alias tt="bash ~/dev-tmux.sh"
