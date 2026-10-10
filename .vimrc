@@ -14,9 +14,8 @@ inoremap <esc> <nop>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>W :wa<CR>
-nnoremap <leader>wq :wq<CR>
 nnoremap <leader>so :so %<CR>
-nnoremap <C-p> :find 
+nnoremap <leader>sf :find
 
 nnoremap <tab> >>
 nnoremap <S-tab> <<
